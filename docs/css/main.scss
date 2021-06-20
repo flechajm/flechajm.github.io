@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #32b129;
+  --primary-color: #11681d;
+  --accent-color: #a6f533;
+  --base-color: #ffffff;
+  --pill: rgba(0, 0, 0, 0.54);
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: black;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    section {
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      scroll-snap-align: start;
+
+      &#section-1 {
+        justify-content: space-between;
+        background-color: black;
+        // background-image: url('../images/portrait.jpg');
+        background-size: auto;
+        background-position: right;
+        background-repeat: no-repeat;
+
+        #welcome {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          line-height: 1;
+          margin-left: 15em;
+
+          .hello {
+            color: white;
+            font-family: "Raleway";
+            font-size: 4rem;
+          }
+          .name {
+            color: crimson;
+            font-family: "Raleway";
+            font-weight: 800;
+            font-size: 7rem;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgb(117, 0, 59);
+          }
+        }
+
+        #welcome::after {
+          content: "";
+          background-color: crimson;
+          box-shadow: 0 0 10px rgb(117, 0, 59);
+          width: 500px;
+          height: 10px;
+          display: block;
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    .container {
+      section {
+        &#section-1 {
+          background-size: cover;
+
+          #welcome {
+            opacity: 1;
+            line-height: 1;
+            margin-left: 2em;
+            margin-top: 25em;
+
+            .hello {
+              color: white;
+              font-family: "Raleway";
+              font-size: 2rem;
+            }
+
+            .name {
+              text-shadow: 0 0 5px rgb(161, 14, 75);
+              color: crimson;
+              font-family: "Raleway";
+              font-weight: 800;
+              font-size: 3.6rem;
+            }            
+          }
+
+          #welcome::after {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
