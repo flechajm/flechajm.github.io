@@ -6,19 +6,214 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Juan Manuel Flecha</title>
   </head>
   <body>
+    <nav>
+      <label for="toggle"><div class="icon burger"></div></label>
+      <input type="checkbox" id="toggle" />
+      <div class="menu">
+        <a href="#welcome">Home</a>
+        <a href="#about">About me</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <span><a href="https://www.google.com.ar" target="_blank">DOWNLOAD CV</a></span>        
+      </div>
+    </nav>
     <div class="container">
-      <section id="section-1">
-        <div id="welcome">
-          <div class="hello">Hola, soy</div>
+      <section id="welcome">
+        <div class="welcome-body">
+          <div class="hello">Hi, I’m</div>
           <div class="name">Juan Manuel</div>
           <div class="name">Flecha</div>
+          <div class="slogan">
+            <div>fullstack <b>developer</b> 👨‍💻</div>
+            <div><b>front-end</b> lover 🎨</div>
+            <div>bit <b>geek</b> 🧃</div>
+          </div>
+          <div class="social">
+            <a
+              href="https://github.com/flechajm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="icon github" title="Visítame en GitHub"></div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/flechajm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><div class="icon linkedin" title="Contáctame por Linkedin"></div
+            ></a>
+            <a
+              href="https://www.instagram.com/flechajm/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="icon ig" title="Conóceme en Instagram"></div
+            ></a>
+            <a
+              href="https://twitter.com/flechajm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="icon twitter" title="Léeme en Twitter"></div
+            ></a>
+            <a
+              href="mailto:flechajm@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="icon at" title="Envíame un e-mail"></div
+            ></a>
+          </div>
         </div>
       </section>
-      <section><h1>Pagina 2</h1></section>
-      <section><h1>Pagina 3</h1></section>
+      <section id="about">
+        <div class="about-body">
+          <div class="image">
+            <img src="images/about.jpg" alt="" />
+          </div>
+          <div class="info">
+            <h1>About me</h1>
+            <p>
+              I was born in 1987, <span>Buenos Aires - Argentina</span>.
+              <br />I’ve started programming at 12, in Visual Basic 6, as a
+              hobby. Now, I’m a fullstack software <span>developer</span> with
+              more than <span>11 years</span> of professional experience in many
+              languages. <br /><br />I’m very passionated for
+              <span>UI/UX design</span>, <span>mobile</span> and
+              <span>front-end</span> development; as well as backend. And I love
+              build things that others find useful <span>❤</span>.
+              <br /><br /><i>Things enter through the eyes first.</i>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="experience-body">
+          <h1>Experience</h1>
+          <div class="job">
+            <div class="left">
+              <div>Access Informática S.R.L.</div>
+              <div>Mar 2011 - Current</div>
+              <div>CTO & Sr. Fullstack Developer</div>
+            </div>
+            <div class="right">
+              Since 2011 to this days, I’m proud to be part of the main product
+              of this company. As <span>developer</span>, I’ve designed the
+              entire front-end standards and multiple architectures design for
+              almost all our products, mainly using
+              <span>.NET Framework</span> and languages ​​like <span>C#</span>,
+              <span>HTML</span>, <span>JavaScript</span>, <span>jQuery</span>,
+              <span>T-SQL</span>; as well as <span>.NET Core</span> and
+              <span>.NET 5</span>. <br /><br />Many of these use the
+              <a
+                href="https://www.devexpress.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>DevExpress ORM</span></a
+              >
+              (ASP.NET), so I have a strong discipline using it.<br /><br />As
+              <span>CTO</span>, I’m responsible for the technical decisions of
+              our apps, keeping them updated with the latest technologies
+              and always making continuous improvement.
+            </div>
+          </div>
+          <div class="job">
+            <div class="left">
+              <div>WireFox</div>
+              <div>Sep 2010 - Feb 2012</div>
+              <div>Computer Technician</div>
+            </div>
+            <div class="right">
+              As a <span>computer technician</span> at a big company, my job was
+              to repair, optimize and build computers, make backups and
+              restores, and configure internet/intranet networks.
+              <br /><br /><span>WireFox</span>
+              was a great experience and I’ve learned a lot.
+              <br /><br />Actually, I’m doing this kind of job for my self.
+            </div>
+          </div>
+          <div class="job">
+            <div class="left">
+              <div>S@les Computer</div>
+              <div>Jun 2008 - Ago 2010</div>
+              <div>Computer Technician</div>
+            </div>
+            <div class="right">
+              My first serious job and focused on what I wanted. As a
+              <span>computer technician</span> at small company, my job was to
+              repair, optimize and build computers, make backups and restores,
+              and configure internet/intranet networks.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="education">
+        <div class="education-body">
+          <h1>education</h1>
+          <div class="job">
+            <div class="left">
+              <div>Access Informática S.R.L.</div>
+              <div>Mar 2011 - Current</div>
+              <div>CTO & Sr. Fullstack Developer</div>
+            </div>
+            <div class="right">
+              Since 2011 to this days, I’m proud to be part of the main product
+              of this company. As <span>developer</span>, I’ve designed the
+              entire front-end standards and multiple architectures design for
+              almost all our products, mainly using
+              <span>.NET Framework</span> and languages ​​like <span>C#</span>,
+              <span>HTML</span>, <span>JavaScript</span>, <span>jQuery</span>,
+              <span>T-SQL</span>; as well as <span>.NET Core</span> and
+              <span>.NET 5</span>. <br /><br />Many of these use the
+              <a
+                href="https://www.devexpress.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>DevExpress ORM</span></a
+              >
+              (ASP.NET), so I have a strong discipline using it.<br /><br />As
+              <span>CTO</span>, I’m responsible for the technical decisions of
+              our apps, keeping them updated with the latest technologies
+              and always making continuous improvement.
+            </div>
+          </div>
+          <div class="job">
+            <div class="left">
+              <div>WireFox</div>
+              <div>Sep 2010 - Feb 2012</div>
+              <div>Computer Technician</div>
+            </div>
+            <div class="right">
+              As a <span>computer technician</span> at a big company, my job was
+              to repair, optimize and build computers, make backups and
+              restores, and configure internet/intranet networks.
+              <br /><br /><span>WireFox</span>
+              was a great experience and I’ve learned a lot.
+              <br /><br />Actually, I’m doing this kind of job for my self.
+            </div>
+          </div>
+          <div class="job">
+            <div class="left">
+              <div>S@les Computer</div>
+              <div>Jun 2008 - Ago 2010</div>
+              <div>Computer Technician</div>
+            </div>
+            <div class="right">
+              My first serious job and focused on what I wanted. As a
+              <span>computer technician</span> at small company, my job was to
+              repair, optimize and build computers, make backups and restores,
+              and configure internet/intranet networks.
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>

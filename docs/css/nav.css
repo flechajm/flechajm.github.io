@@ -1,0 +1,88 @@
+.nav-scrolled {
+  background-color: var(--scroll-bg);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  height: 80px;
+  text-align: left;
+  font-family: "Cairo";
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: 80px;
+  position: fixed;
+  width: calc(100vw - 11px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2;
+}
+nav img {
+  margin-top: 8px;
+}
+nav span {
+  font-family: "Cairo";
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem;
+  background-color: var(--primary);
+  border-radius: 500px;
+  padding: 5px 15px;
+}
+nav span:hover {
+  background-color: var(--accent);
+  transition: background-color 0.2s linear;
+}
+nav span a:hover {
+  color: var(--scroll-bg);
+  transition: color 0.2s linear;
+}
+nav .menu {
+  margin: 0 30px 0 30px;
+}
+nav .menu span a::before {
+  display: none;
+}
+nav .menu a {
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 10px;
+}
+nav .menu a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  margin: -5px 0;
+  background-color: var(--primary);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+nav .menu a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 40px 0 0;
+  font-size: 24px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+nav #toggle {
+  display: none;
+}/*# sourceMappingURL=nav.css.map */

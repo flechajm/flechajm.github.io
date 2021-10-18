@@ -1,114 +1,271 @@
+@import 'nav.scss';
+@import 'icons.css';
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
 :root {
-  --bg-color: #32b129;
-  --primary-color: #11681d;
-  --accent-color: #a6f533;
-  --base-color: #ffffff;
-  --pill: rgba(0, 0, 0, 0.54);
+  --bg: black;
+  --primary: crimson;
+  --primary-shadow: #a10e4b;
+  --section-about: #090909;
+  --scroll-bg: #0d051b;
+  --accent: #FFA000;
 }
 
-@font-face {
-  font-family: Raleway;
-  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
-}
-
+html,
 body {
+  padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  background-color: var(--bg);
+  width: 100vw;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--scroll-bg);
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 6px;
+  border: 3px solid var(--scroll-bg);
+}
+
+h1 {
+  font-family: 'Raleway';
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
   width: 100vw;
   height: 100vh;
-  color: white;
-  background-color: black;
+  scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-  .container {
-    width: 100%;
-    height: 100%;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  section {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: 100vh;
+    // scroll-snap-align: start;
 
-    section {
-      display: flex;
-      align-items: center;
-      width: 100vw;
-      height: 100vh;
-      scroll-snap-align: start;
+    &#welcome {
+      justify-content: space-between;
+      background-color: black;
+      background-size: auto;
+      background-position: right;
+      background-repeat: no-repeat;
 
-      &#section-1 {
-        justify-content: space-between;
-        background-color: black;
-        // background-image: url('../images/portrait.jpg');
-        background-size: auto;
-        background-position: right;
-        background-repeat: no-repeat;
+      .welcome-body {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1;
+        margin: 3rem 0 0 15rem;
+        z-index: 1;
 
-        #welcome {
-          display: none;
+        .hello {
+          color: white;
+          font-family: "Montserrat";
+          font-weight: bold;
+          font-size: 3rem;
+        }
+
+        .name {
+          text-shadow: 0 0 5px var(--primary-shadow);
+          color: var(--primary);
+          font-family: "Raleway";
+          font-weight: 800;
+          font-size: 7rem;
+          white-space: nowrap;
+        }
+
+        .slogan {
+          display: flex;
+          line-height: 3rem;
           flex-direction: column;
-          justify-content: center;
-          line-height: 1;
-          margin-left: 15em;
+          margin-top: 2rem;
+          font-family: 'Cairo';
+          font-weight: 200;
+          font-size: 2rem;
 
-          .hello {
-            color: white;
-            font-family: "Raleway";
-            font-size: 4rem;
-          }
-          .name {
-            color: crimson;
-            font-family: "Raleway";
-            font-weight: 800;
-            font-size: 7rem;
-            white-space: nowrap;
-            text-shadow: 0 0 10px rgb(117, 0, 59);
-          }
-        }
+          div {
+            display: inline-block;
 
-        #welcome::after {
-          content: "";
-          background-color: crimson;
-          box-shadow: 0 0 10px rgb(117, 0, 59);
-          width: 500px;
-          height: 10px;
-          display: block;
-          margin-top: 1em;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  body {
-    .container {
-      section {
-        &#section-1 {
-          background-size: cover;
-
-          #welcome {
-            opacity: 1;
-            line-height: 1;
-            margin-left: 2em;
-            margin-top: 25em;
-
-            .hello {
-              color: white;
-              font-family: "Raleway";
-              font-size: 2rem;
+            &::after {
+              content: '/>';
+              font-weight: bold;
+              color: var(--primary);
             }
 
-            .name {
-              text-shadow: 0 0 5px rgb(161, 14, 75);
-              color: crimson;
-              font-family: "Raleway";
-              font-weight: 800;
-              font-size: 3.6rem;
-            }            
+            &::before {
+              content: ' <';
+              font-weight: bold;
+              color: var(--primary);
+            }
+          }
+        }
+
+        .social {
+          visibility: hidden;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: flex-start;
+          float: left;
+          width: 100%;
+          margin-top: 10rem;
+
+
+          .icon {
+            transition: transform .2s ease;
+            will-change: bottom;
+
+            &:hover {
+              transform: translateY(-10px);
+              filter: invert(20%) sepia(78%) saturate(4745%) hue-rotate(339deg) brightness(86%) contrast(100%);
+            }
+          }
+        }
+      }
+    }
+
+    &#about {
+      background-color: var(--section-about);
+      justify-content: center;
+
+      .about-body {
+        display: flex;
+        width: calc(100vw - 30%);
+        justify-content: space-evenly;
+        align-items: center;
+
+        p {
+          margin-top: 0;
+          font-family: 'Cairo';
+          font-size: 1.5rem;
+
+          span {
+            color: var(--primary);
           }
 
-          #welcome::after {
-            width: 300px;
+          i {
+            font-size: 1rem;
+            color: grey;
+          }
+        }
+
+        .image {
+          img {
+            border-radius: 10px;
+            height: 600px;
+          }
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+      }
+    }
+
+    &#experience {
+      background-color: rgb(17, 2, 27);
+      justify-content: center;
+      height: 180vh;
+
+      .experience-body {
+
+        .job {
+          display: flex;
+          width: 50vw;
+          padding-bottom: 5rem;
+
+          .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: end;
+            font-family: 'Cairo';
+            font-size: 1.3rem;
+            white-space: nowrap;
+            padding-right: 3rem;
+            margin-top: -1rem;
+            min-width: 350px;
+
+            div:nth-child(1) {
+              font-size: 2rem;
+              font-weight: 800;
+              color: var(--accent);
+
+              &::after {
+                color: white;
+                content: "";
+              }
+            }
+
+            div:nth-child(2) {
+              font-size: 1rem;
+              font-weight: 800;
+              color: #666666;
+              margin-top: -1rem;
+
+              &::after {
+                color: white;
+                content: "";
+              }
+            }
+          }
+
+          .right {
+            padding: 1rem 0 1rem 3rem;
+            border-left: 1px solid #666666;
+            font-family: 'Cairo';
+            font-size: 1.3rem;
+            text-align: justify;
+
+            span {
+              color: var(--accent);
+            }
+
+            a {
+              span {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-underline-offset: 3px;
+
+                &:hover {
+                  color: var(--primary);
+                }
+              }
+            }
+
           }
         }
       }
     }
   }
 }
+
+@import 'media.scss';

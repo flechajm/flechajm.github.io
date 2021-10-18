@@ -1,97 +1,515 @@
-:root {
-  --bg-color: #32b129;
-  --primary-color: #11681d;
-  --accent-color: #a6f533;
-  --base-color: #ffffff;
-  --pill: rgba(0, 0, 0, 0.54);
+@import 'icons.css';
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+.nav-scrolled {
+  background-color: var(--scroll-bg);
 }
 
-@font-face {
-  font-family: Raleway;
-  src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+nav {
+  display: flex;
+  justify-content: flex-start;
+  height: 80px;
+  text-align: left;
+  font-family: "Cairo";
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: 80px;
+  position: fixed;
+  width: calc(100vw - 11px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 2;
 }
+nav img {
+  margin-top: 8px;
+}
+nav span {
+  font-family: "Cairo";
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem;
+  background-color: var(--primary);
+  border-radius: 500px;
+  padding: 5px 15px;
+}
+nav span:hover {
+  background-color: var(--accent);
+  transition: background-color 0.2s linear;
+}
+nav span a:hover {
+  color: var(--scroll-bg);
+  transition: color 0.2s linear;
+}
+nav .menu {
+  margin: 0 30px 0 30px;
+}
+nav .menu span a::before {
+  display: none;
+}
+nav .menu a {
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 10px;
+}
+nav .menu a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  margin: -5px 0;
+  background-color: var(--primary);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s;
+}
+nav .menu a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0 40px 0 0;
+  font-size: 24px;
+  line-height: 80px;
+  cursor: pointer;
+  display: none;
+}
+nav #toggle {
+  display: none;
+}
+
+:root {
+  --bg: black;
+  --primary: crimson;
+  --primary-shadow: #a10e4b;
+  --section-about: #090909;
+  --scroll-bg: #0d051b;
+  --accent: #FFA000;
+}
+
+html,
 body {
+  padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  background-color: var(--bg);
+  width: 100vw;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--scroll-bg);
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 6px;
+  border: 3px solid var(--scroll-bg);
+}
+
+h1 {
+  font-family: "Raleway";
+  font-size: 4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
   width: 100vw;
   height: 100vh;
-  color: white;
-  background-color: black;
-}
-body .container {
-  width: 100%;
-  height: 100%;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-body .container section {
+.container section {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: inherit;
   height: 100vh;
-  scroll-snap-align: start;
 }
-body .container section#section-1 {
+.container section#welcome {
   justify-content: space-between;
   background-color: black;
   background-size: auto;
   background-position: right;
   background-repeat: no-repeat;
 }
-body .container section#section-1 #welcome {
+.container section#welcome .welcome-body {
   display: none;
   flex-direction: column;
   justify-content: center;
   line-height: 1;
-  margin-left: 15em;
+  margin: 3rem 0 0 15rem;
+  z-index: 1;
 }
-body .container section#section-1 #welcome .hello {
+.container section#welcome .welcome-body .hello {
   color: white;
-  font-family: "Raleway";
-  font-size: 4rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 3rem;
 }
-body .container section#section-1 #welcome .name {
-  color: crimson;
+.container section#welcome .welcome-body .name {
+  text-shadow: 0 0 5px var(--primary-shadow);
+  color: var(--primary);
   font-family: "Raleway";
   font-weight: 800;
   font-size: 7rem;
   white-space: nowrap;
-  text-shadow: 0 0 10px #75003b;
 }
-body .container section#section-1 #welcome::after {
+.container section#welcome .welcome-body .slogan {
+  display: flex;
+  line-height: 3rem;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-family: "Cairo";
+  font-weight: 200;
+  font-size: 2rem;
+}
+.container section#welcome .welcome-body .slogan div {
+  display: inline-block;
+}
+.container section#welcome .welcome-body .slogan div::after {
+  content: "/>";
+  font-weight: bold;
+  color: var(--primary);
+}
+.container section#welcome .welcome-body .slogan div::before {
+  content: " <";
+  font-weight: bold;
+  color: var(--primary);
+}
+.container section#welcome .welcome-body .social {
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  float: left;
+  width: 100%;
+  margin-top: 10rem;
+}
+.container section#welcome .welcome-body .social .icon {
+  transition: transform 0.2s ease;
+  will-change: bottom;
+}
+.container section#welcome .welcome-body .social .icon:hover {
+  transform: translateY(-10px);
+  filter: invert(20%) sepia(78%) saturate(4745%) hue-rotate(339deg) brightness(86%) contrast(100%);
+}
+.container section#about {
+  background-color: var(--section-about);
+  justify-content: center;
+}
+.container section#about .about-body {
+  display: flex;
+  width: calc(100vw - 30%);
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container section#about .about-body p {
+  margin-top: 0;
+  font-family: "Cairo";
+  font-size: 1.5rem;
+}
+.container section#about .about-body p span {
+  color: var(--primary);
+}
+.container section#about .about-body p i {
+  font-size: 1rem;
+  color: grey;
+}
+.container section#about .about-body .image img {
+  border-radius: 10px;
+  height: 600px;
+}
+.container section#about .about-body .info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.container section#experience {
+  background-color: #11021b;
+  justify-content: center;
+  height: 180vh;
+}
+.container section#experience .experience-body .job {
+  display: flex;
+  width: 50vw;
+  padding-bottom: 5rem;
+}
+.container section#experience .experience-body .job .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  font-family: "Cairo";
+  font-size: 1.3rem;
+  white-space: nowrap;
+  padding-right: 3rem;
+  margin-top: -1rem;
+  min-width: 350px;
+}
+.container section#experience .experience-body .job .left div:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.container section#experience .experience-body .job .left div:nth-child(1)::after {
+  color: white;
   content: "";
-  background-color: crimson;
-  box-shadow: 0 0 10px #75003b;
-  width: 500px;
-  height: 10px;
-  display: block;
-  margin-top: 1em;
+}
+.container section#experience .experience-body .job .left div:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #666666;
+  margin-top: -1rem;
+}
+.container section#experience .experience-body .job .left div:nth-child(2)::after {
+  color: white;
+  content: "";
+}
+.container section#experience .experience-body .job .right {
+  padding: 1rem 0 1rem 3rem;
+  border-left: 1px solid #666666;
+  font-family: "Cairo";
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.container section#experience .experience-body .job .right span {
+  color: var(--accent);
+}
+.container section#experience .experience-body .job .right a span {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.container section#experience .experience-body .job .right a span:hover {
+  color: var(--primary);
 }
 
 @media (max-width: 900px) {
-  body .container section#section-1 {
-    background-size: cover;
+  nav {
+    justify-content: flex-end;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--bg);
+    border-bottom: 1px dashed var(--primary-shadow);
+    width: 100vw;
   }
-  body .container section#section-1 #welcome {
+  nav span {
+    font-family: "Cairo";
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.2rem;
+    background-color: var(--primary);
+    border-radius: 30px;
+    padding: 0px 30px;
+    height: 40px;
+    display: flex;
+    margin: 15px 0 25px 0;
+  }
+  nav .menu {
+    margin: 0;
+    right: 15px;
+    border: 1px dashed var(--primary-shadow);
+    border-top: none;
+    top: 60px;
+    display: none;
+    position: absolute;
+    width: 220px;
+    background-color: var(--bg);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  nav .menu a {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    line-height: 20px;
+  }
+  nav label {
+    display: flex;
+    align-items: center;
+  }
+  nav label .icon {
+    margin-right: -1rem;
+  }
+  nav label::before {
+    font-family: "Raleway";
+    font-weight: bold;
+    content: "JMF";
+    color: var(--primary);
+    display: flex;
+    padding-right: 10px;
+  }
+  nav #toggle:checked + .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container section#welcome {
+    position: relative;
+    background-position: 0;
+    background-size: cover;
+    background-color: #00000090;
+    background-blend-mode: soft-light;
+  }
+  .container section#welcome .welcome-body {
     opacity: 1;
     line-height: 1;
-    margin-left: 2em;
-    margin-top: 25em;
+    margin-left: 2rem;
+    margin-top: 23rem;
   }
-  body .container section#section-1 #welcome .hello {
-    color: white;
-    font-family: "Raleway";
-    font-size: 2rem;
+  .container section#welcome .welcome-body .hello {
+    font-size: 1.8rem;
   }
-  body .container section#section-1 #welcome .name {
-    text-shadow: 0 0 5px #a10e4b;
-    color: crimson;
+  .container section#welcome .welcome-body .name {
+    text-shadow: 0 0 5px var(--primary-shadow);
+    color: var(--primary);
     font-family: "Raleway";
     font-weight: 800;
-    font-size: 3.6rem;
+    font-size: 3rem;
   }
-  body .container section#section-1 #welcome::after {
-    width: 300px;
+  .container section#welcome .welcome-body .slogan {
+    display: flex;
+    line-height: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    height: 7rem;
+  }
+  .container section#welcome .welcome-body .social {
+    display: none;
+  }
+  .container section#about {
+    flex-wrap: wrap;
+    position: relative;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .container section#about .about-body {
+    width: 100%;
+    margin-top: 80px;
+    flex-direction: column;
+  }
+  .container section#about .about-body h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .container section#about .about-body p {
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+  .container section#about .about-body p span {
+    color: var(--primary);
+  }
+  .container section#about .about-body .image img {
+    height: 400px;
+  }
+  .container section#about .about-body .info {
+    width: 80%;
+  }
+  .container section#experience {
+    flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .container section#experience h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .container section#experience .experience-body {
+    margin-top: 60px;
+  }
+  .container section#experience .experience-body .job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding-bottom: 5rem;
+  }
+  .container section#experience .experience-body .job .left {
+    align-items: flex-start;
+    padding-right: 0;
+    width: 100%;
+  }
+  .container section#experience .experience-body .job .left div:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .container section#experience .experience-body .job .left div:nth-child(1)::after {
+    color: white;
+    content: "";
+  }
+  .container section#experience .experience-body .job .left div:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #666666;
+    margin-top: -1rem;
+  }
+  .container section#experience .experience-body .job .left div:nth-child(2)::after {
+    color: white;
+    content: "";
+  }
+  .container section#experience .experience-body .job .right {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: none;
+    border-top: 1px solid #666666;
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  .container section#experience .experience-body .job .right span {
+    color: var(--accent);
+  }
+  .container section#experience .experience-body .job .right a span {
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+    text-underline-offset: 3px;
+  }
+  .container section#experience .experience-body .job .right a span:hover {
+    color: var(--primary);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .icon.ig {
+    height: 26px;
   }
 }/*# sourceMappingURL=main.css.map */

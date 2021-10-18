@@ -1,0 +1,33 @@
+.icon {
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    filter: invert(100%);
+    cursor: pointer;
+    shape-rendering: geometricPrecision;
+
+    &.github {
+        background-image: url('../images/github.svg');
+    }
+
+    &.linkedin {
+        background-image: url('../images/linkedin.svg');
+    }
+
+    &.ig {
+        height: 50px;
+        background-image: url('../images/instagram.svg');
+    }
+
+    &.twitter {
+        background-image: url('../images/twitter.svg');
+    }
+
+    &.at {
+        background-image: url('../images/at.svg');
+    }
+
+    &.burger {
+        background-image: url('../images/burger.svg');
+    }
+}
