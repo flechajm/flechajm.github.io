@@ -18,7 +18,7 @@ function isDevice() {
 
 function showWelcome() {
   $("#welcome").fadeOut("fast", function () {
-    $(this).css("background-image", "url(../images/portrait.jpg)");
+    $(this).css("background-image", "url('/docs/images/portrait.jpg')");
     $(this)
       .fadeIn()
       .queue(function () {

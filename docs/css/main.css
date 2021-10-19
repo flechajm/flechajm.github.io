@@ -12,7 +12,7 @@ nav {
   height: 80px;
   text-align: left;
   font-family: "Cairo";
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   line-height: 80px;
   position: fixed;
   width: calc(100vw - 11px);
@@ -26,28 +26,8 @@ nav {
 nav img {
   margin-top: 8px;
 }
-nav span {
-  font-family: "Cairo";
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.2rem;
-  background-color: var(--primary);
-  border-radius: 500px;
-  padding: 5px 15px;
-}
-nav span:hover {
-  background-color: var(--accent);
-  transition: background-color 0.2s linear;
-}
-nav span a:hover {
-  color: var(--scroll-bg);
-  transition: color 0.2s linear;
-}
 nav .menu {
   margin: 0 30px 0 30px;
-}
-nav .menu span a::before {
-  display: none;
 }
 nav .menu a {
   color: white;
@@ -96,6 +76,7 @@ nav #toggle {
   --primary: crimson;
   --primary-shadow: #a10e4b;
   --section-about: #090909;
+  --section-experience: #11021b;
   --scroll-bg: #0d051b;
   --accent: #FFA000;
 }
@@ -118,10 +99,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 11px;
+  background-color: var(--bg);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scroll-bg);
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -139,6 +121,29 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-family: "Cairo";
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: white;
+  border: 2px solid var(--primary);
+  border-radius: 500px;
+  padding: 5px 15px;
+}
+.button:hover {
+  background-color: var(--primary);
+  transition: all 0.2s linear;
+}
+.button a {
+  color: white;
+}
+.button a::before {
+  display: none;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -151,6 +156,22 @@ a {
   align-items: center;
   width: inherit;
   height: 100vh;
+}
+.container section .pill {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  cursor: default;
+  color: var(--scroll-bg);
+  background-color: var(--accent);
+  border-radius: 500px;
+  padding: 0.15rem 0.6rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1.4rem 0.4rem 0 0.4rem;
+  float: left;
 }
 .container section#welcome {
   justify-content: space-between;
@@ -253,14 +274,18 @@ a {
   width: 50%;
 }
 .container section#experience {
-  background-color: #11021b;
+  text-align: center;
+  background-color: var(--section-experience);
   justify-content: center;
-  height: 180vh;
+  height: 200vh;
+}
+.container section#experience .experience-body h1 {
+  margin: 6rem 0;
 }
 .container section#experience .experience-body .job {
   display: flex;
-  width: 50vw;
-  padding-bottom: 5rem;
+  width: 60vw;
+  margin-bottom: 6rem;
 }
 .container section#experience .experience-body .job .left {
   display: flex;
@@ -272,7 +297,7 @@ a {
   white-space: nowrap;
   padding-right: 3rem;
   margin-top: -1rem;
-  min-width: 350px;
+  min-width: 400px;
 }
 .container section#experience .experience-body .job .left div:nth-child(1) {
   font-size: 2rem;
@@ -310,6 +335,75 @@ a {
   text-underline-offset: 3px;
 }
 .container section#experience .experience-body .job .right a span:hover {
+  color: var(--primary);
+}
+.container section#education {
+  text-align: center;
+  background-color: var(--section-about);
+  justify-content: center;
+  height: 200vh;
+}
+.container section#education .education-body h1 {
+  margin: 6rem 0;
+}
+.container section#education .education-body .degree {
+  display: flex;
+  width: 70vw;
+  margin-bottom: 6rem;
+}
+.container section#education .education-body .degree .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  font-family: "Cairo";
+  font-size: 1.3rem;
+  white-space: nowrap;
+  padding-right: 3rem;
+  margin-top: -1rem;
+  min-width: 600px;
+}
+.container section#education .education-body .degree .left div:nth-child(1) {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.container section#education .education-body .degree .left div:nth-child(1)::after {
+  color: white;
+  content: "";
+}
+.container section#education .education-body .degree .left div:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #666666;
+  margin-top: -1rem;
+}
+.container section#education .education-body .degree .left div:nth-child(2)::after {
+  color: white;
+  content: "";
+}
+.container section#education .education-body .degree .right {
+  padding: 1rem 0 1rem 3rem;
+  border-left: 1px solid #666666;
+  font-family: "Cairo";
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.container section#education .education-body .degree .right ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+.container section#education .education-body .degree .right span {
+  color: var(--accent);
+}
+.container section#education .education-body .degree .right a span {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+.container section#education .education-body .degree .right a span:hover {
   color: var(--primary);
 }
 
@@ -375,6 +469,10 @@ a {
     align-items: center;
   }
 
+  .container section .pill {
+    margin-top: 1rem;
+    float: right;
+  }
   .container section#welcome {
     position: relative;
     background-position: 0;
@@ -445,12 +543,8 @@ a {
     height: -moz-max-content;
     height: max-content;
   }
-  .container section#experience h1 {
+  .container section#experience .experience-body h1 {
     font-size: 3rem;
-    text-align: center;
-  }
-  .container section#experience .experience-body {
-    margin-top: 60px;
   }
   .container section#experience .experience-body .job {
     display: flex;
@@ -458,31 +552,22 @@ a {
     justify-content: center;
     align-items: center;
     width: 90vw;
-    padding-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .container section#experience .experience-body .job .left {
     align-items: flex-start;
     padding-right: 0;
     width: 100%;
+    min-width: 0;
   }
   .container section#experience .experience-body .job .left div:nth-child(1) {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--accent);
-  }
-  .container section#experience .experience-body .job .left div:nth-child(1)::after {
-    color: white;
-    content: "";
   }
   .container section#experience .experience-body .job .left div:nth-child(2) {
     font-size: 1rem;
     font-weight: 800;
-    color: #666666;
     margin-top: -1rem;
-  }
-  .container section#experience .experience-body .job .left div:nth-child(2)::after {
-    color: white;
-    content: "";
   }
   .container section#experience .experience-body .job .right {
     padding: 1rem;
@@ -492,17 +577,45 @@ a {
     font-size: 1.2rem;
     text-align: justify;
   }
-  .container section#experience .experience-body .job .right span {
-    color: var(--accent);
+  .container section#education {
+    flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
-  .container section#experience .experience-body .job .right a span {
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-    text-underline-offset: 3px;
+  .container section#education .education-body h1 {
+    font-size: 3rem;
   }
-  .container section#experience .experience-body .job .right a span:hover {
-    color: var(--primary);
+  .container section#education .education-body .degree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-bottom: 4rem;
+  }
+  .container section#education .education-body .degree .left {
+    align-items: flex-start;
+    padding-right: 0;
+    width: 100%;
+    min-width: 0;
+  }
+  .container section#education .education-body .degree .left div:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  .container section#education .education-body .degree .left div:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: -1rem;
+  }
+  .container section#education .education-body .degree .right {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: none;
+    border-top: 1px solid #666666;
+    font-size: 1.2rem;
+    text-align: justify;
   }
 
   .icon {

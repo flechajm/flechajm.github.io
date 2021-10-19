@@ -60,6 +60,10 @@
     align-items: center;
   }
 
+  .container section .pill {
+    margin-top: 1rem;
+    float: right;
+  }
   .container section#welcome {
     position: relative;
     background-position: 0;
@@ -130,12 +134,8 @@
     height: -moz-max-content;
     height: max-content;
   }
-  .container section#experience h1 {
+  .container section#experience .experience-body h1 {
     font-size: 3rem;
-    text-align: center;
-  }
-  .container section#experience .experience-body {
-    margin-top: 60px;
   }
   .container section#experience .experience-body .job {
     display: flex;
@@ -143,31 +143,22 @@
     justify-content: center;
     align-items: center;
     width: 90vw;
-    padding-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .container section#experience .experience-body .job .left {
     align-items: flex-start;
     padding-right: 0;
     width: 100%;
+    min-width: 0;
   }
   .container section#experience .experience-body .job .left div:nth-child(1) {
     font-size: 1.6rem;
     font-weight: 800;
-    color: var(--accent);
-  }
-  .container section#experience .experience-body .job .left div:nth-child(1)::after {
-    color: white;
-    content: "";
   }
   .container section#experience .experience-body .job .left div:nth-child(2) {
     font-size: 1rem;
     font-weight: 800;
-    color: #666666;
     margin-top: -1rem;
-  }
-  .container section#experience .experience-body .job .left div:nth-child(2)::after {
-    color: white;
-    content: "";
   }
   .container section#experience .experience-body .job .right {
     padding: 1rem;
@@ -177,17 +168,45 @@
     font-size: 1.2rem;
     text-align: justify;
   }
-  .container section#experience .experience-body .job .right span {
-    color: var(--accent);
+  .container section#education {
+    flex-wrap: wrap;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
-  .container section#experience .experience-body .job .right a span {
-    text-decoration: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted;
-    text-underline-offset: 3px;
+  .container section#education .education-body h1 {
+    font-size: 3rem;
   }
-  .container section#experience .experience-body .job .right a span:hover {
-    color: var(--primary);
+  .container section#education .education-body .degree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin-bottom: 4rem;
+  }
+  .container section#education .education-body .degree .left {
+    align-items: flex-start;
+    padding-right: 0;
+    width: 100%;
+    min-width: 0;
+  }
+  .container section#education .education-body .degree .left div:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  .container section#education .education-body .degree .left div:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: -1rem;
+  }
+  .container section#education .education-body .degree .right {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: none;
+    border-top: 1px solid #666666;
+    font-size: 1.2rem;
+    text-align: justify;
   }
 
   .icon {

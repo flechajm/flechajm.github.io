@@ -69,6 +69,11 @@
 
     .container {
         section {
+            .pill {
+                margin-top: 1rem;
+                float: right;
+            }
+
             &#welcome {
                 position: relative;
                 background-position: 0;
@@ -150,13 +155,10 @@
                 flex-wrap: wrap;
                 height: max-content;
 
-                h1 {
-                    font-size: 3rem;
-                    text-align: center;
-                }
-
                 .experience-body {
-                    margin-top: 60px;
+                    h1 {
+                        font-size: 3rem;
+                    }
 
                     .job {
                         display: flex;
@@ -164,34 +166,23 @@
                         justify-content: center;
                         align-items: center;
                         width: 90vw;
-                        padding-bottom: 5rem;
+                        margin-bottom: 4rem;
 
                         .left {
                             align-items: flex-start;
                             padding-right: 0;
                             width: 100%;
+                            min-width: 0;
 
                             div:nth-child(1) {
                                 font-size: 1.6rem;
                                 font-weight: 800;
-                                color: var(--accent);
-
-                                &::after {
-                                    color: white;
-                                    content: "";
-                                }
                             }
 
                             div:nth-child(2) {
                                 font-size: 1rem;
                                 font-weight: 800;
-                                color: #666666;
                                 margin-top: -1rem;
-
-                                &::after {
-                                    color: white;
-                                    content: "";
-                                }
                             }
                         }
 
@@ -202,23 +193,54 @@
                             border-top: 1px solid #666666;
                             font-size: 1.2rem;
                             text-align: justify;
+                        }
+                    }
+                }
 
-                            span {
-                                color: var(--accent);
+            }
+
+            &#education {
+                flex-wrap: wrap;
+                height: max-content;
+
+                .education-body {
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    .degree {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 90vw;
+                        margin-bottom: 4rem;
+
+                        .left {
+                            align-items: flex-start;
+                            padding-right: 0;
+                            width: 100%;
+                            min-width: 0;
+
+                            div:nth-child(1) {
+                                font-size: 1.6rem;
+                                font-weight: 800;
                             }
 
-                            a {
-                                span {
-                                    text-decoration: underline;
-                                    text-decoration-style: dotted;
-                                    text-underline-offset: 3px;
-
-                                    &:hover {
-                                        color: var(--primary);
-                                    }
-                                }
+                            div:nth-child(2) {
+                                font-size: 1rem;
+                                font-weight: 800;
+                                margin-top: -1rem;
                             }
+                        }
 
+                        .right {
+                            padding: 1rem;
+                            margin-top: 1rem;
+                            border-left: none;
+                            border-top: 1px solid #666666;
+                            font-size: 1.2rem;
+                            text-align: justify;
                         }
                     }
                 }

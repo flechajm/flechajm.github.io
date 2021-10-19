@@ -10,6 +10,7 @@
   --primary: crimson;
   --primary-shadow: #a10e4b;
   --section-about: #090909;
+  --section-experience: #11021b;
   --scroll-bg: #0d051b;
   --accent: #FFA000;
 }
@@ -33,10 +34,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 11px;
+  background-color: var(--bg);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scroll-bg);
+  background: var(--bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,6 +56,32 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-family: 'Cairo';
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: white;
+  border: 2px solid var(--primary);
+  border-radius: 500px;
+  padding: 5px 15px;
+
+  &:hover {
+    background-color: var(--primary);
+    transition: all 0.2s linear;
+  }
+
+  a {
+    color: white;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -67,7 +95,22 @@ a {
     align-items: center;
     width: inherit;
     height: 100vh;
+
     // scroll-snap-align: start;
+    .pill {
+      font-family: 'Raleway';
+      font-weight: bold;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      cursor: default;
+      color: var(--scroll-bg);
+      background-color: var(--accent);
+      border-radius: 500px;
+      padding: 0.15rem 0.6rem;
+      height: fit-content;
+      margin: 1.4rem 0.4rem 0 0.4rem;
+      float: left;
+    }
 
     &#welcome {
       justify-content: space-between;
@@ -191,16 +234,20 @@ a {
     }
 
     &#experience {
-      background-color: rgb(17, 2, 27);
+      text-align: center;
+      background-color: var(--section-experience);
       justify-content: center;
-      height: 180vh;
+      height: 200vh;
 
       .experience-body {
+        h1 {
+          margin: 6rem 0;
+        }
 
         .job {
           display: flex;
-          width: 50vw;
-          padding-bottom: 5rem;
+          width: 60vw;
+          margin-bottom: 6rem;
 
           .left {
             display: flex;
@@ -212,7 +259,7 @@ a {
             white-space: nowrap;
             padding-right: 3rem;
             margin-top: -1rem;
-            min-width: 350px;
+            min-width: 400px;
 
             div:nth-child(1) {
               font-size: 2rem;
@@ -244,6 +291,93 @@ a {
             font-family: 'Cairo';
             font-size: 1.3rem;
             text-align: justify;
+
+            span {
+              color: var(--accent);
+            }
+
+            a {
+              span {
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-underline-offset: 3px;
+
+                &:hover {
+                  color: var(--primary);
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+
+    &#education {
+      text-align: center;
+      background-color: var(--section-about);
+      justify-content: center;
+      height: 200vh;
+
+      .education-body {
+        h1 {
+          margin: 6rem 0;
+        }
+
+        .degree {
+          display: flex;
+          width: 70vw;
+          margin-bottom: 6rem;
+
+          .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: end;
+            font-family: 'Cairo';
+            font-size: 1.3rem;
+            white-space: nowrap;
+            padding-right: 3rem;
+            margin-top: -1rem;
+            min-width: 600px;
+
+
+            div:nth-child(1) {
+              font-size: 2rem;
+              font-weight: 800;
+              color: var(--primary);
+
+              &::after {
+                color: white;
+                content: "";
+              }
+            }
+
+            div:nth-child(2) {
+              font-size: 1rem;
+              font-weight: 800;
+              color: #666666;
+              margin-top: -1rem;
+
+              &::after {
+                color: white;
+                content: "";
+              }
+            }
+          }
+
+          .right {
+            padding: 1rem 0 1rem 3rem;
+            border-left: 1px solid #666666;
+            font-family: 'Cairo';
+            font-size: 1.3rem;
+            text-align: justify;
+
+            ul {
+              list-style-type: disc;
+              padding-left: 1.5rem;
+              text-align: left;
+            }
 
             span {
               color: var(--accent);
