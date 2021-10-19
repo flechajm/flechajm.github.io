@@ -92,6 +92,8 @@ a {
 
   section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     align-items: center;
     width: inherit;
     height: 100vh;
@@ -107,9 +109,9 @@ a {
       background-color: var(--accent);
       border-radius: 500px;
       padding: 0.15rem 0.6rem;
+      margin: 1.5rem 0 -0.6rem 0;
       height: fit-content;
-      margin: 1.4rem 0.4rem 0 0.4rem;
-      float: left;
+      width: fit-content;
     }
 
     &#welcome {
@@ -123,8 +125,8 @@ a {
         display: none;
         flex-direction: column;
         justify-content: center;
-        line-height: 1;
-        margin: 3rem 0 0 15rem;
+        line-height: 0.85;
+        margin: 4rem 0 0 15rem;
         z-index: 1;
 
         .hello {
@@ -199,9 +201,11 @@ a {
 
       .about-body {
         display: flex;
-        width: calc(100vw - 30%);
+        width: 100vw;
         justify-content: space-evenly;
         align-items: center;
+        margin-left: 15rem;
+        margin-right: 15rem;
 
         p {
           margin-top: 0;
@@ -237,7 +241,7 @@ a {
       text-align: center;
       background-color: var(--section-experience);
       justify-content: center;
-      height: 200vh;
+      height: max-content;
 
       .experience-body {
         h1 {
@@ -246,7 +250,8 @@ a {
 
         .job {
           display: flex;
-          width: 60vw;
+          width: min-content;
+          min-width: 60vw;
           margin-bottom: 6rem;
 
           .left {
@@ -317,7 +322,7 @@ a {
       text-align: center;
       background-color: var(--section-about);
       justify-content: center;
-      height: 200vh;
+      height: max-content;
 
       .education-body {
         h1 {
@@ -340,9 +345,12 @@ a {
             padding-right: 3rem;
             margin-top: -1rem;
             min-width: 600px;
-
+            text-align: left;
 
             div:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
               font-size: 2rem;
               font-weight: 800;
               color: var(--primary);
@@ -363,6 +371,11 @@ a {
                 color: white;
                 content: "";
               }
+            }
+
+
+            div:nth-child(3) {
+              white-space: normal;
             }
           }
 

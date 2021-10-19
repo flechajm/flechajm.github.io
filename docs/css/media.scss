@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media screen and (max-width: 1280px) {
     nav {
         justify-content: flex-end;
         height: 60px;
@@ -153,6 +153,7 @@
 
             &#experience {
                 flex-wrap: wrap;
+                position: relative;
                 height: max-content;
 
                 .experience-body {
@@ -164,7 +165,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        align-items: center;
+                        align-items: flex-start;
                         width: 90vw;
                         margin-bottom: 4rem;
 
@@ -201,6 +202,7 @@
 
             &#education {
                 flex-wrap: wrap;
+                position: relative;
                 height: max-content;
 
                 .education-body {
@@ -212,7 +214,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        align-items: center;
+                        align-items: flex-start;
                         width: 90vw;
                         margin-bottom: 4rem;
 
@@ -223,6 +225,7 @@
                             min-width: 0;
 
                             div:nth-child(1) {
+                                align-items: flex-start;
                                 font-size: 1.6rem;
                                 font-weight: 800;
                             }
