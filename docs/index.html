@@ -1,211 +1,209 @@
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/common.js?v=0.1"></script>
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Juan Manuel Flecha</title>
   </head>
   <body>
-    <nav>
-      <label for="toggle"><div class="icon burger"></div></label>
-      <input type="checkbox" id="toggle" />
-      <div class="menu">
-        <a href="#welcome">Home</a>
-        <a href="#about">About me</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <span class="button"
-          ><a href="https://www.google.com.ar" target="_blank"
-            >DOWNLOAD CV</a
-          ></span
-        >
-      </div>
-    </nav>
-    <div class="container">
-      <section id="welcome">
-        <div class="welcome-body">
-          <div class="hello">Hi, I’m</div>
-          <div class="name">Juan Manuel</div>
-          <div class="name">Flecha</div>
-          <div class="slogan">
-            <div>fullstack <b>developer</b> 👨‍💻</div>
-            <div><b>front-end</b> lover 🎨</div>
-            <div>bit <b>geek</b> 🧃</div>
+    <!-- nav menu -->
+    <header>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <a href="/index.html" title="Juan Manuel Flecha"> <img src="img/logo.png" alt="" /></a>
           </div>
-          <div class="social">
-            <a
-              href="https://github.com/flechajm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="icon github" title="Visítame en GitHub"></div>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/flechajm/"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><div class="icon linkedin" title="Contáctame por Linkedin"></div
-            ></a>
-            <a
-              href="https://www.instagram.com/flechajm/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="icon ig" title="Conóceme en Instagram"></div
-            ></a>
-            <a
-              href="https://twitter.com/flechajm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="icon twitter" title="Léeme en Twitter"></div
-            ></a>
-            <a
-              href="mailto:flechajm@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="icon at" title="Envíame un e-mail"></div
-            ></a>
+          <div class="links">
+            <ul>
+              <li>
+                <a href="#home"><i class="uil uil-estate nav_icon"></i>Home</a>
+              </li>
+              <li>
+                <a href="#about"><i class="uil uil-user nav_icon"></i>About me</a>
+              </li>
+              <li>
+                <a href="#experience"><i class="uil uil-briefcase-alt nav_icon"></i>Experience</a>
+              </li>
+              <li>
+                <a href="#education"><i class="uil uil-graduation-cap nav_icon"></i>Education</a>
+              </li>
+              <li>
+                <a href="#skills"><i class="uil uil-brackets-curly nav_icon"></i>Skills</a>
+              </li>
+              <li>
+                <a href="#contact"><i class="uil uil-at nav_icon"></i>Contact</a>
+              </li>
+              <li>
+                <a download="" href="/cv/JMF_CV.pdf" class="button" target="_blank" rel="noopener noreferrer"
+                  >Download CV</a
+                >
+              </li>
+            </ul>
           </div>
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="uil uil-bars nav_icon"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="home-content">
+          <div class="column-left">
+            <div class="hello">Hi, I’m</div>
+            <div class="name">Juan Manuel</div>
+            <div class="name">Flecha</div>
+            <div class="slogan">
+              <div>fullstack <b>developer</b> 👨‍💻</div>
+              <div><b>front-end</b> lover 🎨</div>
+              <div><b>mobile</b> enthusiast 📲</div>
+              <div>bit <b>geek</b> 🧃</div>
+            </div>
+            <div class="social">
+              <a href="https://github.com/flechajm" target="_blank" rel="noopener noreferrer">
+                <i class="uil uil-github" title="Visítame en GitHub"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/flechajm/" target="_blank" rel="noopener noreferrer">
+                <i class="uil uil-linkedin" title="Contáctame por Linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/flechajm/" target="_blank" rel="noopener noreferrer">
+                <i class="uil uil-instagram" title="Conóceme en Instagram"></i>
+              </a>
+              <a href="https://twitter.com/flechajm" target="_blank" rel="noopener noreferrer">
+                <i class="uil uil-twitter" title="Léeme en Twitter"></i
+              ></a>
+              <a href="mailto:flechajm@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="uil uil-at" title="Envíame un e-mail"></i>
+              </a>
+            </div>
+          </div>
+          <div class="column-right"></div>
         </div>
       </section>
       <section id="about">
-        <div class="about-body">
-          <div class="image">
-            <img src="images/about.jpg" alt="" />
+        <div class="container grid-2">
+          <div class="column-1">
+            <img src="img/about.jpg" alt="" />
           </div>
-          <div class="info">
+          <div class="column-2">
             <h1>About me</h1>
-            <p>
-              I was born in 1987, <span>Buenos Aires - Argentina</span>.
-              <br />I’ve started programming at 12, in Visual Basic 6, as a
-              hobby. Now, I’m a fullstack software <span>developer</span> with
-              more than <span>11 years</span> of professional experience in many
-              languages. <br /><br />I’m very passionated for
-              <span>UI/UX design</span>, <span>mobile</span> and
-              <span>front-end</span> development; as well as backend. And I love
-              build things that others find useful <span>❤</span>.
-              <br /><br /><i>Things enter through the eyes first.</i>
+            <p class="text">
+              I was born in 1987, <span>Buenos Aires - Argentina</span>. <br />I’ve started programming at 12, in Visual
+              Basic 6, as a hobby. Now, I’m a fullstack software <span>developer</span> with more than
+              <span>11 years</span> of professional experience in many languages. <br /><br />I’m very passionated for
+              <span>UI/UX design</span>, <span>mobile</span> and <span>front-end</span> development; as well as backend.
+              And I love build things that others find useful <span>❤</span>. <br /><br /><i
+                >Things enter through the eyes first.</i
+              >
             </p>
           </div>
         </div>
       </section>
       <section id="experience">
-        <div class="experience-body">
-          <h1>Experience</h1>
-          <div class="job">
-            <div class="left">
-              <div>Access Informática S.R.L.</div>
-              <div>Mar 2011 - Current</div>
-              <div>CTO & Sr. Fullstack Developer</div>
+        <h1>Experience</h1>
+        <div class="container">
+          <div class="job grid-2">
+            <div class="column-1">
+              <div class="title">Access Informática S.R.L.</div>
+              <div class="range">Mar 2011 - Current</div>
+              <div class="rol">CTO & Sr. Fullstack Developer</div>
             </div>
-            <div class="right">
-              Since 2011 to this days, I’m proud to be part of the main product
-              of this company. As <span>developer</span>, I’ve designed the
-              entire front-end standards and multiple architectures design for
-              almost all our products, mainly using
-              <span>.NET Framework</span> and languages ​​like <span>C#</span>,
-              <span>HTML</span>, <span>JavaScript</span>, <span>jQuery</span>,
-              <span>T-SQL</span>; as well as <span>.NET Core</span> and
-              <span>.NET 5</span>. <br /><br />Many of these use the
-              <a
-                href="https://www.devexpress.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><span>DevExpress ORM</span></a
-              >
-              (ASP.NET), so I have a strong discipline using it.<br /><br />As
-              <span>CTO</span>, I’m responsible for the technical decisions of
-              our apps, keeping them updated with the latest technologies and
-              always making continuous improvement.
+            <div class="column-2">
+              <p class="text">
+                Since 2011 to this days, I’m proud to be part of the main product of this company. As
+                <span>developer</span>, I’ve designed the entire front-end standards and multiple architectures design
+                for almost all our products, mainly using <span>.NET Framework</span> and languages ​​like
+                <span>C#</span>, <span>HTML</span>, <span>JavaScript</span>, <span>jQuery</span>, <span>T-SQL</span>; as
+                well as <span>.NET Core</span> and <span>.NET 5</span>. <br /><br />Many of these use the
+                <a href="https://www.devexpress.com" target="_blank" rel="noopener noreferrer"
+                  ><span>DevExpress ORM</span></a
+                >
+                (ASP.NET), so I have a strong discipline using it.<br /><br />As <span>CTO</span>, I’m responsible for
+                the technical decisions of our apps, keeping them updated with the latest technologies and always making
+                continuous improvement.
+              </p>
             </div>
           </div>
-          <div class="job">
-            <div class="left">
-              <div>WireFox</div>
-              <div>Sep 2010 - Feb 2012</div>
-              <div>Computer Technician</div>
+          <div class="job grid-2">
+            <div class="column-1">
+              <div class="title">WireFox</div>
+              <div class="range">Sep 2010 - Feb 2012</div>
+              <div class="rol">Computer Technician</div>
             </div>
-            <div class="right">
-              As a <span>computer technician</span> at a big company, my job was
-              to repair, optimize and build computers, make backups and
-              restores, and configure internet/intranet networks.
-              <br /><br /><span>WireFox</span>
-              was a great experience and I’ve learned a lot.
-              <br /><br />Actually, I’m doing this kind of job for my self.
+            <div class="column-2">
+              <p class="text">
+                As a <span>computer technician</span> at a big company, my job was to repair, optimize and build
+                computers, make backups and restores, and configure internet/intranet networks. <br /><br /><span
+                  >WireFox</span
+                >
+                was a great experience and I’ve learned a lot.
+                <br /><br />Actually, I’m doing this kind of job for my self.
+              </p>
             </div>
           </div>
-          <div class="job">
-            <div class="left">
-              <div>S@les Computer</div>
-              <div>Jun 2008 - Ago 2010</div>
-              <div>Computer Technician</div>
+          <div class="job grid-2">
+            <div class="column-1">
+              <div class="title">S@les Computer</div>
+              <div class="range">Jun 2008 - Ago 2010</div>
+              <div class="rol">Computer Technician</div>
             </div>
-            <div class="right">
-              My first serious job and focused on what I wanted. As a
-              <span>computer technician</span> at small company, my job was to
-              repair, optimize and build computers, make backups and restores,
-              and configure internet/intranet networks.
+            <div class="column-2">
+              <p class="text">
+                My first serious job and focused on what I wanted. As a
+                <span>computer technician</span> at small company, my job was to repair, optimize and build computers,
+                make backups and restores, and configure internet/intranet networks.
+              </p>
             </div>
           </div>
         </div>
       </section>
       <section id="education">
-        <div class="education-body">
-          <h1>Education</h1>
-          <div class="degree">
-            <div class="left">
-              <div>ORT Institute of Technology</div>
-              <div>2012 - Current</div>
-              <div>Systems Analyst</div>
+        <h1>Education</h1>
+        <div class="container">
+          <div class="degree grid-2">
+            <div class="column-1">
+              <div class="title">ORT Institute of Technology</div>
+              <div class="range">Mar 2011 - Current</div>
+              <div class="rol">CTO & Sr. Fullstack Developer</div>
             </div>
-            <div class="right">
-              Currently studyng the last year of bachelor's degree.
+            <div class="column-2">
+              <p class="text">Currently studyng the last year of bachelor's degree.</p>
             </div>
           </div>
-          <div class="degree">
-            <div class="left">
-              <div><span class="pill">COURSE</span>Microsoft Azure</div>
-              <div>Jul 2021 - 9 hours</div>
-              <div>Migrating On-Premises Infrastructure and Data</div>
+          <div class="degree grid-2">
+            <div class="column-1">
+              <div class="title"><span class="pill">COURSE</span>Microsoft Azure</div>
+              <div class="range">Jul 2021 - 9 hours</div>
+              <div class="rol">Migrating On-Premises Infrastructure and Data</div>
             </div>
-            <div class="right">
-              <ul>
+            <div class="column-2">
+              <ul class="text">
                 <li>Migration plan.</li>
                 <li>
-                  Migration of traditional on-premises Windows Server identity
-                  workloads and protect against threats with Azure Active
-                  Directory (Azure AD), Azure AD Domain Services, Azure AD
-                  Connect, and Windows Server IaaS domain controllers.
+                  Migration of traditional on-premises Windows Server identity workloads and protect against threats
+                  with Azure Active Directory (Azure AD), Azure AD Domain Services, Azure AD Connect, and Windows Server
+                  IaaS domain controllers.
                 </li>
                 <li>
-                  Migration of on-premises Windows Server process workloads to
-                  Azure, including physical servers and VMs running on VMware or
-                  Windows Server Hyper-V.
+                  Migration of on-premises Windows Server process workloads to Azure, including physical servers and VMs
+                  running on VMware or Windows Server Hyper-V.
                 </li>
                 <li>SQL Server to Azure SQL.</li>
               </ul>
             </div>
           </div>
-          <div class="degree">
-            <div class="left">
-              <div>
-                <span class="pill">COURSE</span>
-                Access Informática S.R.L.
-              </div>
-              <div>Jan 2020 - 12 hours</div>
-              <div>React.js</div>
+          <div class="degree grid-2">
+            <div class="column-1">
+              <div class="title"><span class="pill">COURSE</span>Access Informática S.R.L.</div>
+              <div class="range">Jan 2020 - 12 hours</div>
+              <div class="rol">React.js</div>
             </div>
-            <div class="right">
-              <ul>
+            <div class="column-2">
+              <ul class="text">
                 <li>Introduction to React.js</li>
                 <li>MERN - Mongo, Express, React, Node</li>
                 <li>Concepts of Hooks</li>
@@ -213,46 +211,118 @@
               </ul>
             </div>
           </div>
-          <div class="degree">
-            <div class="left">
-              <div><span class="pill">COURSE</span>Educación IT</div>
-              <div>Sep 2016 - 12 hours</div>
-              <div>SQL Tunning & Optimization</div>
-
-              <div class="button">
-                <a
-                  href="images/sql_certificate.jpg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >VIEW CERTIFICATE</a
-                >
-              </div>
+          <div class="degree grid-2">
+            <div class="column-1">
+              <div class="title"><span class="pill">COURSE</span>Educación IT</div>
+              <div class="range">Sep 2016 - 12 hours</div>
+              <div class="rol">SQL Tunning & Optimization</div>
+              <a href="img/sql_certificate.jpg" class="button" target="_blank" rel="noopener noreferrer"
+                >VIEW CERTIFICATE</a
+              >
             </div>
-            <div class="right">
-              <ul>
-                <li>General conceptos</li>
+            <div class="column-2">
+              <ul class="text">
+                <li>General concepts</li>
                 <li>Control and concurrency management.</li>
                 <li>Performance monitoring.</li>
                 <li>Instance optimization.</li>
-                <li>
-                  Optimization of the physical implementation of databases.
-                </li>
+                <li>Optimization of the physical implementation of databases.</li>
                 <li>Querys and indexes performance optimization.</li>
               </ul>
             </div>
           </div>
-          <div class="degree">
-            <div class="left">
-              <div>San Ramón Nonato Institute</div>
-              <div>2000 - 2005</div>
-              <div>Accounting major with a Concentration in Computing</div>
+          <div class="degree grid-2">
+            <div class="column-1">
+              <div class="title">San Ramón Nonato Institute</div>
+              <div class="range">2000 - 2005</div>
+              <div class="rol">Accounting major with a Concentration in Computing</div>
             </div>
-            <div class="right">
-              High school degree strongly oriented to computing and programming.
+            <div class="column-2">
+              <p class="text">High school degree strongly oriented to computing and programming.</p>
             </div>
           </div>
         </div>
       </section>
-    </div>
+      <section id="skills">
+        <h1>Skills</h1>
+        <div class="container">
+          <div class="skills">
+            <div class="skill">
+              <div class="name">Flutter 💙 / Dart</div>
+              <div class="bar">
+                <div class="per" per="70"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">C#, T-SQL</div>
+              <div class="bar">
+                <div class="per" per="90"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">HTML, CSS</div>
+              <div class="bar">
+                <div class="per" per="80"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">JavaScript, jQuery</div>
+              <div class="bar">
+                <div class="per" per="75"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">MERN</div>
+              <div class="bar">
+                <div class="per" per="40"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">DBA SQL Server</div>
+              <div class="bar">
+                <div class="per" per="75"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">IIS Administration</div>
+              <div class="bar">
+                <div class="per" per="85"><div class="arrow"></div></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="name">Git</div>
+              <div class="bar">
+                <div class="per" per="60"><div class="arrow"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <div class="container">
+          <div class="social">
+            <a href="https://github.com/flechajm" target="_blank" rel="noopener noreferrer">
+              <i class="uil uil-github" title="Visítame en GitHub"></i>github
+            </a>
+            <a href="https://www.linkedin.com/in/flechajm/" target="_blank" rel="noopener noreferrer">
+              <i class="uil uil-linkedin" title="Contáctame por Linkedin"></i>linkedin
+            </a>
+            <a href="https://www.instagram.com/flechajm/" target="_blank" rel="noopener noreferrer">
+              <i class="uil uil-instagram" title="Conóceme en Instagram"></i>instagram
+            </a>
+          </div>
+          <div class="social">
+            <a href="https://twitter.com/flechajm" target="_blank" rel="noopener noreferrer">
+              <i class="uil uil-twitter" title="Léeme en Twitter"></i>twitter</a
+            >
+            <a href="mailto:flechajm@gmail.com" target="_blank" rel="noopener noreferrer">
+              <i class="uil uil-at" title="Envíame un e-mail"></i>e-mail
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
