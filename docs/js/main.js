@@ -2,6 +2,21 @@ const navMenu = document.querySelector("nav ul");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
 const navLink = document.querySelectorAll("nav ul li a");
+const popup = document.getElementById('popup');
+const popupClose = document.getElementById('close');
+
+popup.addEventListener('click', openSokoban);
+popupClose.addEventListener('click', closePopup);
+
+function closePopup(e) {
+  e.stopPropagation();
+  const popup = document.getElementById('popup');
+  popup.style.display = 'none';
+}
+
+function openSokoban(e) {
+  window.open('https://flechajm.github.io/sokoban/', '_blank');
+}
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
