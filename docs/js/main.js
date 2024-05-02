@@ -15,7 +15,7 @@ function closePopup(e) {
 }
 
 function openSokoban(e) {
-  window.open('https://flechajm.github.io/sokoban/', '_blank');
+  window.open('https://kosmolaris.com', '_blank');
 }
 
 if (navToggle) {

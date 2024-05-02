@@ -96,6 +96,7 @@ h1 {
 
 ul {
   list-style: none;
+  color: var(--text-color);
 }
 
 a {
@@ -293,16 +294,22 @@ header nav .links i {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/img/sokoban.png");
-  background-size: contain;
+  background-image: url(https://raw.githubusercontent.com/flechajm/kosmolaris/main/img/social/meta.png);
+  background-size: cover;
   position: fixed;
   top: 100px;
   right: 30px;
-  width: 300px;
-  height: 200px;
+  width: 20%;
+  height: 20%;
   z-index: 10;
   border: 5px solid crimson;
   border-radius: 10px;
+}
+#popup:hover {
+  filter: brightness(140%);
+}
+#popup:hover p {
+  color: rgba(255, 255, 255, 0.5);
 }
 #popup #close {
   position: absolute;
@@ -311,10 +318,22 @@ header nav .links i {
   z-index: 11;
 }
 #popup div {
-  color: white;
-  font-family: "Press Start 2P";
   text-align: center;
+  font-size: var(--normal-font-size);
   text-shadow: 0 0 5px var(--dark-color-one);
+  line-height: 1;
+}
+#popup div p {
+  color: rgba(255, 255, 255, 0.2);
+}
+#popup div .title {
+  font-size: var(--normal-font-size);
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+#popup div .subtitle {
+  margin-top: 2em;
+  font-size: var(--small-font-size);
 }
 
 section {
@@ -450,6 +469,13 @@ section#experience .container .job .column-2 {
   padding: 1rem 0 3rem 3rem;
   border-left: 1px solid var(--grey-color);
   margin-left: calc(var(--margin-grid-2) * -1);
+}
+section#experience .container .job .column-2 ul {
+  list-style: inside;
+  color: var(--text-color);
+}
+section#experience .container .job .column-2 ul span {
+  color: var(--secondary-color);
 }
 section#experience .container .job .column-2 p.text span {
   color: var(--secondary-color);

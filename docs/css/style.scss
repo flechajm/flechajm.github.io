@@ -108,6 +108,7 @@ h1 {
 
 ul {
   list-style: none;
+  color: var(--text-color);
 }
 
 a {
@@ -329,16 +330,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/img/sokoban.png");
-  background-size: contain;
+  background-image: url(https://raw.githubusercontent.com/flechajm/kosmolaris/main/img/social/meta.png);
+  background-size: cover;
   position: fixed;
   top: 100px;
   right: 30px;
-  width: 300px;
-  height: 200px;
+  width: 20%;
+  height: 20%;
   z-index: 10;
   border: 5px solid crimson;
   border-radius: 10px;
+
+  &:hover {
+    filter: brightness(140%);
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
 
   #close {
     position: absolute;
@@ -348,10 +357,25 @@ header {
   }
 
   div {
-    color: white;
-    font-family: "Press Start 2P";
     text-align: center;
+    font-size: var(--normal-font-size);
     text-shadow: 0 0 5px var(--dark-color-one);
+    line-height: 1;
+
+    p {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    .title {
+      font-size: var(--normal-font-size);
+      margin-top: 0.5em;
+      margin-bottom: 0.8em;
+    }
+
+    .subtitle {
+      margin-top: 2em;
+      font-size: var(--small-font-size);
+    }
   }
 }
 
@@ -521,6 +545,15 @@ section {
           padding: 1rem 0 3rem 3rem;
           border-left: 1px solid var(--grey-color);
           margin-left: calc(var(--margin-grid-2) * -1);
+
+          ul {
+            list-style: inside;
+            color: var(--text-color);
+
+            span {
+              color: var(--secondary-color);
+            }
+          }
 
           p {
             &.text {
